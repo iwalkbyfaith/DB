@@ -54,7 +54,7 @@ use ict_practice;
 CREATE TABLE userTbl(
 	user_id 	 VARCHAR(8) PRIMARY KEY,
     user_name    VARCHAR(10) NOT NULL,
-    birth_year   int(4) NOT NULL,       -- int 라고만 쓰면 자리수 제한이 없이 쓸 수 있다.
+    birth_year   int(4) NOT NULL,                               -- int 라고만 쓰면 자리수 제한이 없이 쓸 수 있다.
     addr 	     VARCHAR(4) NOT NULL,
     phone_number VARCHAR(11),
     height 		 INT(3),
@@ -68,7 +68,7 @@ CREATE TABLE buyTbl(
     group_name 		VARCHAR(4),
     price 			INT(7) NOT NULL,
     amount 			INT(3) NOT NULL,
-    FOREIGN KEY(user_id) REFERENCES userTbl(user_id)   -- userTble을 참조하겠다
+    FOREIGN KEY(user_id) REFERENCES userTbl(user_id)                     -- userTble을 참조하겠다
 );
 
 
