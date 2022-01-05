@@ -56,7 +56,7 @@ DISTINCT는 결과물로 나온 컬럼의 중복값을 다 제거하고 고유�
     -- 숫자를 하나만 적으면 자동으로 0번 자료부터 n개를 보여줍니다.
 		SELECT * FROM employees limit 10;
     
-		-- 일정 데이터셋을 먼저 얻어놓고 그 내부적으로 정렬시킬때는 서브쿼리를 씁니다. (지금 할 수준은 아님. 몰라도.. 돼..)
+		-- 일정 데이터셋을 먼저 얻어놓고 그 내부적으로 정렬시킬때는 서브쿼리를 씁니다. (이건 지금 할 수준은 아님. 몰라도.. 돼..)
 			SELECT * FROM (SELECT * FROM employees limit 10) e ORDER BY hire_date DESC;
 			-- 우리가 원하는 것은 밑에 구문(70번)이 아니라 57번 코드에서 정렬을 하는 것.
 				-- 서브쿼리는 소괄호 안에 있는 것을 먼저 실행한다고 어제 배웠음. 따라서
@@ -89,7 +89,7 @@ GROUP BY는 같은 데이터를 하나의 그룹으로 묶어줍니다.
 		use ict_practice;
     
     -- 하기 데이터에서 각 인물별로 구매한 개수 총합을 구해보겠습니다.
-		SELECT user_id, amount FROM buytbl ORDER BY user_id;              -- 이것과
+		SELECT user_id, amount FROM buytbl ORDER BY user_id ASC;              -- 이것과
         -- 같은 아이디라도 각각 나옴
 	-- SELECT 컬럼명, 집계함수(컬럼명2) ... FROM 테이블명 GROUP BY 묶을컬럼명;
 		SELECT user_id, sum(amount) FROM buyTbl GROUP BY user_id;         -- 이것을 컨트롤 엔터 쳐서 뭐가 변했는지 비교해보쟝
