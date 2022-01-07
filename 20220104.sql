@@ -180,16 +180,18 @@ WHERE절과 사용법은 완전히 동일합니다.
 /*
 SQL구문의 분류
 
-DML(Data Manipulation Language)
- - 데이터 조작 언어
- - SELECT, INSERT, UPDATE, DELETE
- - 테이블의 데이터를 조회하거나 변경하기 위해서 사용한다.
- 
 DDL(Data Definitin Language)
  - 데이터 정의 언어
  - 데이터베이스, 테이블, 뷰, 인덱스 등을 생성하고 삭제하는 구문
  - CREATE(생성), DROP(삭제), ALTER(수정)
  - DML과 달리 commit; 없이도 바로바로 서버에 반영된다.
+ 
+ 
+DML(Data Manipulation Language)
+ - 데이터 조작 언어
+ - SELECT, INSERT, UPDATE, DELETE
+ - 테이블의 데이터를 조회하거나 변경하기 위해서 사용한다.
+ 
 
 DCL(Date Control Language)
  - 데이터 제어 언어
