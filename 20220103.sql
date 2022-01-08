@@ -71,10 +71,12 @@ SELECT 컬럼명1, 컬럼명2 ... FROM 테이블명 WHERE 컬럼명 = 조건식;
     -- 경기, 화성, 영국에 있는 사람들만 in 키워드로 조회해주세요.
 		SELECT * FROM userTbl WHERE addr in('경기', '화성', '영국');
         SELECT * FROM userTbl WHERE addr in('삼척', '주소', '주소주소');
+        
+        SELECT * FROM userTbl WHERE height in(180, 183);
         -- in 키워드는 나중에 파이썬에도 사용하니 잘 기억해두자.
 	
     -- like 연산자는 일종의 표현 양식을 만들어줍니다.
-    -- like 연산자를 이용하면 %라고 불리는 와일드 카드나, 혹은 _라고 불리는 와일드 카드 문자를 이용해 매칭되는 문자나 문자열을 찾습니다.alter
+    -- like 연산자를 이용하면 %라고 불리는 와일드 카드나, 혹은 _라고 불리는 와일드 카드 문자를 이용해 매칭되는 문자나 문자열을 찾습니다.
 		-- 채씨를 찾는 케이스 (%는 뒤에 몇 글자가 오더라도 상관 없음.)
 			-- 아래 구문은 채로 시작하는 모든 요소를 다 가져옵니다. '채'도 포함
 			SELECT * FROM usertbl WHERE user_name like '채%';
@@ -107,7 +109,7 @@ SELECT 컬럼명1, 컬럼명2 ... FROM 테이블명 WHERE 컬럼명 = 조건식;
         SELECT user_name, height FROM userTbl WHERE height > 175;
         
 	-- 서브쿼리 활용 방법
-    -- 서브 쿼리는 FROM절 다음에 ()를 이용해서 SELECT 구문을 한 번 더 활용합니다.
+    -- 서브 쿼리는 WHERE절 다음에 ()를 이용해서 SELECT 구문을 한 번 더 활용합니다.
 	-- 구문 : SELECT user_name, height FROM userTble WHERE height > '조회하는 사람의 키';
     SELECT user_name, height FROM userTbl WHERE height > (SELECT height FROM userTbl WHERE user_name = '손흥민');
 		-- 105번의 내용(손흥민의 키가 나오는 구문)을 '조회하는 사람의 키' 부분에 넣어주면 됨.
