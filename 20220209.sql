@@ -28,6 +28,14 @@ CREATE TABLE userinfo(
 -- 이메일 안 넣기 방법 2) null 처리
 	INSERT INTO userinfo VALUES ('최혜빈', 'hbhhb', 'hb1234', null);
 
+-- 전체 조회
 select * from userinfo;
-
+-- 조회
 select * from userinfo where uid='id119';
+-- 적재
+INSERT INTO userinfo VALUES ('name', 'id', 'password', 'email');
+-- 삭제
+DELETE FROM userinfo WHERE uid='아이디에요';
+-- 수정
+UPDATE userinfo SET uname ='마제리' WHERE uid='mjmmj';
+UPDATE userinfo SET uname ='name1', upw='pw1', uemail='email1' WHERE uid='id';
