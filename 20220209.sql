@@ -24,16 +24,17 @@ CREATE TABLE userinfo(
 	INSERT INTO userinfo VALUES ('박만득', 'lovelovelove', 'love', 'love333@gmail.com');
 
 -- 이메일 안 넣기 방법 1) 컬럼명 적어주기
-	INSERT INTO userinfo(uname, uid, upw) VALUES ('신세령', 'mjmmj', 'serrry');
+	INSERT INTO userinfo(uname, uid, upw) VALUES ('신세령', 'mjmmjz', 'serrry');
 -- 이메일 안 넣기 방법 2) null 처리
 	INSERT INTO userinfo VALUES ('최혜빈', 'hbhhb', 'hb1234', null);
 
 -- 전체 조회
 select * from userinfo;
 -- 조회
-select * from userinfo where uid='id119';
+select * from userinfo where uid='fdsfef';
 -- 적재
 INSERT INTO userinfo VALUES ('name', 'id', 'password', 'email');
+INSERT INTO userinfo VALUES ('진짜수정됨', 'javajsp', '1234', 'realup@date.com');
 -- 삭제
 DELETE FROM userinfo WHERE uid='아이디에요';
 -- 수정
